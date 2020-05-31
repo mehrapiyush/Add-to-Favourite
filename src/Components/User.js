@@ -46,10 +46,10 @@ class User extends Component{
     render(){
         return(
             <Tabs defaultActiveKey="1" onChange={callback}>
-            <TabPane tab="Tab 1" key="1">
+            <TabPane tab="Users" key="1">
                 <List_user list = {this.state.list} addFavorite={this.addFavorite}/>
             </TabPane>
-            <TabPane tab="Tab 2" key="2">
+            <TabPane tab="Favourites" key="2">
             <Fav favorites = {this.state.favorites} />
             </TabPane>
             </Tabs>
