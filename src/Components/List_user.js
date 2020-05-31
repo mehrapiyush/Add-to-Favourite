@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Button} from 'antd';
 
 class List_user extends Component {
   render() {
@@ -24,7 +25,7 @@ class List_user extends Component {
                     {user.first_name} {user.last_name}
                   </p>
                 </div>
-                <button onClick={() => this.props.addFavorite(user)}>Add to Favorites</button>
+                <Button onClick={() => this.props.addFavorite(user)}>Add to Favourites</Button>
               </li>
             );
           })}   
