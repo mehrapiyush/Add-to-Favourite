@@ -17,10 +17,10 @@ class List_user extends Component {
             return (
               <li key={user.id}>
                 <div>
-                  <img className="thumb" alt="" src={user._links.avatar.href} />
+                  <img src={user._links.avatar.href} />
                 </div>
 
-                <div className="userInfo">
+                <div>
                   <p>
                     {user.first_name} {user.last_name}
                   </p>
