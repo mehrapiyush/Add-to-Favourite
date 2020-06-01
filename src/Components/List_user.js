@@ -14,21 +14,23 @@ class List_user extends Component {
       <div>
         <ul style={style}>
           {this.props.list.map(user => {
-            return (
-              <li key={user.id}>
-                <div>
-                  <img src={user._links.avatar.href} />
-                </div>
-
-                <div>
-                  <p>
-                    {user.first_name} {user.last_name}
-                  </p>
-                </div>
-                <Button onClick={() => this.props.addFavorite(user)}>Add to Favourites</Button>
-              </li>
-            );
-          })}   
+            if(user._links.avatar.href && user.first_name && user.last_name ){
+                return (
+                <li key={user.id}>
+                  <div>
+                    <img src={user._links.avatar.href} />
+                  </div>
+                  <div>
+                    <p>
+                      {user.first_name} {user.last_name}
+                    </p>
+                  </div>
+                  <Button onClick={() => this.props.addFavorite(user)}>Add to Favourites</Button>
+                </li>
+              );
+            }
+          })
+          }   
         </ul>
       </div>
     );
