@@ -23,22 +23,18 @@ class User extends Component{
           });
         }
       };
-    
-      getList = async () => {
-        const api =
-          "https://gorest.co.in/public-api/users?_format=json&access-token=3qIi1MDfD-GXqOSwEHHLH73Y3UitdaFKyVm_";
-    
-        await axios
-          .get(api)
-          .then(response => {
-            this.setState({
-              list: response.data.result
+      getList = () => {
+        const api = "https://gorest.co.in/public-api/users?_format=json&access-token=3qIi1MDfD-GXqOSwEHHLH73Y3UitdaFKyVm_";
+        axios.get(api)
+            .then(response =>{
+              this.setState({
+                list : response.data.result
+              });
+            })
+            .catch(err =>{
+                console.log(err);
             });
-          })
-          .catch(err => {
-            console.log(err);
-          });
-      };
+      }
     
       componentDidMount() {
         this.getList();
