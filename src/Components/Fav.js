@@ -4,15 +4,19 @@ import React , {Component} from 'react';
 class Fav extends Component {
   constructor(props) {
     super(props);
-
-    this.state = {};
   }
   
   render() {
+    let style = {
+      display: "grid",
+      gridTemplateColumns : "repeat(auto-fill, minmax(400px,1fr))",
+      padding: "20px",
+      gridGap: "20px 20px",
+    };
     const { favorites } = this.props;
     return (
       <div>
-        <ul>
+        <ul style = {style}>
           {favorites.map(user => {
             return (
               <li key={user.id}>
