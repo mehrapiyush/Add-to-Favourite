@@ -7,7 +7,7 @@ class Fav extends Component {
 
     this.state = {};
   }
-
+  
   render() {
     const { favorites } = this.props;
     return (
@@ -17,7 +17,7 @@ class Fav extends Component {
             return (
               <li key={user.id}>
                 <div>
-                  <img className="thumb" alt="" src={user._links.avatar.href} />
+                  <img alt="Not Displayed" src={user._links.avatar.href} />
                 </div>
 
                 <div className="userInfo">

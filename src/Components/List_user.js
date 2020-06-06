@@ -5,9 +5,9 @@ class List_user extends Component {
   render() {
     let style = {
       display: "grid",
-      gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
-      padding: "1rem",
-      gridGap: "1rem 1rem"
+      gridTemplateColumns : "repeat(auto-fill, minmax(400px,1fr))",
+      padding: "20px",
+      gridGap: "20px 20px",
     };
 
     return (

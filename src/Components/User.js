@@ -27,6 +27,7 @@ class User extends Component{
         const api = "https://gorest.co.in/public-api/users?_format=json&access-token=3qIi1MDfD-GXqOSwEHHLH73Y3UitdaFKyVm_";
         axios.get(api)
             .then(response =>{
+              console.log(response);
               this.setState({
                 list : response.data.result
               });
